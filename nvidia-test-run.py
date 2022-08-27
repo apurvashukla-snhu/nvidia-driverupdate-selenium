@@ -67,6 +67,7 @@ driver.implicitly_wait(10)
 hrefDownload = driver.find_element(By.XPATH, ".//a[contains(@href, 'download')]")  
 hrefDownload.click()
 
+driver.implicitly_wait(10)
 def every_downloads_chrome(driver):
     if not driver.current_url.startswith("chrome://downloads"):
         driver.get("chrome://downloads/")
